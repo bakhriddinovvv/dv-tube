@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Link} from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { ApiService } from '../../service/api.service';
 import { Avatar, Box, Chip, Stack, Typography } from '@mui/material';
@@ -133,7 +133,7 @@ const VideoDetail = () => {
               </Stack>
             </Stack>
             <Stack direction={'row'} py={1} px={2}>
-              <Link to={`/channel${videoDetail?.snippet?.channelId}`}>
+              <Link to={`/channel/${videoDetail?.snippet?.channelId}`}>
                 <Stack
                   direction={'row'}
                   alignItems={'center'}
@@ -142,7 +142,9 @@ const VideoDetail = () => {
                 >
                   <Avatar
                     alt={videoDetail.snippet.channelTitle}
-                    src={videoDetail.snippet.thumbnails.default.url}
+                    src={
+                      'https://img.freepik.com/free-photo/grunge-black-concrete-textured-background_53876-124541.jpg'
+                    }
                   />
                   <Typography variant='subtitle2' color='gray'>
                     {videoDetail.snippet.channelTitle}
