@@ -14,34 +14,17 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 const VideoCard = ({ video }) => {
   console.log(video);
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     try {
-  //       const dataChannelDetail = await ApiService.fetching(
-  //         `channels?part=snippet&id=${id}`
-  //       );
-  //       setChannelDetail(dataChannelDetail.items[0]);
-  //       const dataVideo = await ApiService.fetching(
-  //         `search?channelId=${id}&part=snippet%2Cid&order=date`
-  //       );
-  //       setVideos(dataVideo?.items);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
 
-  //   getData();
-  // }, [id]);
-  // useEffect(()=>{
-
-  // }, )
   return (
     <Card
       sx={{
         width: {
-          xs: '100%',
+          xs: '90vw',
           sm: '360px',
           md: '320px',
+
+          background: colors.primary,
+          paddingBottom:'1rem',
         },
         boxShadow: 'none',
         borderRadius: 0,
@@ -62,9 +45,10 @@ const VideoCard = ({ video }) => {
       </Link>
       <CardContent
         sx={{
-          background: colors.primary,
+  
           height: '200px',
           position: 'relative',
+
         }}
       >
         <Link to={`/video/${video.id.videoId}`}>
