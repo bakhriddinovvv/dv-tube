@@ -13,8 +13,6 @@ import {
   TheaterComedy,
 } from '@mui/icons-material';
 
-export const logo = '../../public/img/logo.png';
-
 export const category = [
   {
     name: 'New',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stack } from '@mui/material';
-import { logo } from '../../constants';
+import Logo from "../../../public/img/logo.png"
 import { Box } from '@mui/material';
 import { colors } from '../../constants/colors';
 import { Link } from 'react-router-dom';
@@ -21,7 +21,7 @@ const Navbar = () => {
       }}
     >
       <Link to={'/'}>
-        <img src={logo} alt='logo' className='logo' />
+        <img src={Logo} alt='logo' className='logo' />
       </Link>
       <SearchBar />
       <Box />
